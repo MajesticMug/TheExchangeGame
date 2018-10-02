@@ -28,28 +28,28 @@ namespace ExchangeGame.API.Controllers
         [HttpGet("{id}", Name = "Get")]
         public async Task<Player> Get(int id)
         {
-            return await _playerService.GetPlayer(id);
+            return await _playerService.GetPlayerAsync(id);
         }
 
         // POST: api/Player
         [HttpPost]
-        public async Task Post([FromBody] Player value)
+        public async Task Post([FromBody] Player player)
         {
-
+            await _playerService.AddPlayerAsync(player);
         }
 
         // PUT: api/Player/5
         [HttpPut("{id}")]
-        public async Task Put(int id, [FromBody] Player value)
+        public async Task Put(int id, [FromBody] Player player)
         {
-
+            await _playerService.SetPlayerAsync(id, player);
         }
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public async Task Delete(int id)
         {
-
+            await _playerService.RemovePlayerAsync(id);
         }
     }
 }

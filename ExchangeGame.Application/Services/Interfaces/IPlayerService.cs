@@ -6,8 +6,10 @@ namespace ExchangeGame.Application.Services.Interfaces
 {
     public interface IPlayerService
     {
-        Task<Player> GetPlayer(int id);
+        Task<Player> GetPlayerAsync(int id);
         Task<ICollection<Player>> GetAllPlayersAsync();
-        Task CreatePlayer(Player player);
+        Task AddPlayerAsync(Player player);
+        Task SetPlayerAsync(int id, Player player);
+        Task RemovePlayerAsync(int id);
     }
 }

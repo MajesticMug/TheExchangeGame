@@ -15,7 +15,7 @@ namespace ExchangeGame.Application.Services.Implementations
             _playerRepository = playerRepository;
         }
 
-        public async Task<Player> GetPlayer(int id)
+        public async Task<Player> GetPlayerAsync(int id)
         {
             return await _playerRepository.GetById(id);
         }
@@ -25,9 +25,19 @@ namespace ExchangeGame.Application.Services.Implementations
             return await _playerRepository.GetAllAsync();
         }
 
-        public async Task CreatePlayer(Player player)
+        public async Task AddPlayerAsync(Player player)
         {
             await _playerRepository.Create(player);
+        }
+
+        public async Task SetPlayerAsync(int id, Player player)
+        {
+            await _playerRepository.Update(id, player);
+        }
+
+        public async Task RemovePlayerAsync(int id)
+        {
+            await _playerRepository.Delete(id);
         }
     }
 }
