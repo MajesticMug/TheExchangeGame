@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ExchangeGame.Application\ExchangeGame.Application.csproj" />
     <ProjectReference Include="..\ExchangeGame.Domain\ExchangeGame.Domain.csproj" />
     <ProjectReference Include="..\ExchangeGame.Infrastructure\ExchangeGame.Infrastructure.csproj" />
   </ItemGroup>

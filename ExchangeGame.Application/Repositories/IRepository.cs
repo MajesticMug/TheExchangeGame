@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ExchangeGame.Domain.Model.Base;
 
-namespace ExchangeGame.Domain.Repositories
+namespace ExchangeGame.Application.Repositories
 {
     public interface IRepository<TModel> where TModel : BaseModel
     {

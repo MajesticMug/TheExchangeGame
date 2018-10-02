@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using ExchangeGame.Domain.Model.Player;
-using ExchangeGame.Domain.Services.Interfaces;
+using ExchangeGame.Application.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExchangeGame.API.Controllers

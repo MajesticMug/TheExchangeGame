@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using ExchangeGame.Domain.Model.Player;
-using ExchangeGame.Domain.Repositories.Players;
-using ExchangeGame.Domain.Services.Interfaces;
+using ExchangeGame.Application.Repositories.Players;
+using ExchangeGame.Application.Services.Interfaces;
 
-namespace ExchangeGame.Domain.Services.Implementations
+namespace ExchangeGame.Application.Services.Implementations
 {
     public class PlayerService : IPlayerService
     {

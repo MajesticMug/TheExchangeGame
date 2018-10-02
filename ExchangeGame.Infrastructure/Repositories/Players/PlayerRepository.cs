@@ -1,5 +1,5 @@
 ﻿using ExchangeGame.Domain.Model.Player;
-using ExchangeGame.Domain.Repositories.Players;
+using ExchangeGame.Application.Repositories.Players;
 using Microsoft.EntityFrameworkCore;
 
 namespace ExchangeGame.Infrastructure.Repositories.Players

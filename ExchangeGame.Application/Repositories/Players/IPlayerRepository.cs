@@ -1,6 +1,6 @@
 ﻿using ExchangeGame.Domain.Model.Player;
 
-namespace ExchangeGame.Domain.Repositories.Players
+namespace ExchangeGame.Application.Repositories.Players
 {
     public interface IPlayerRepository : IRepository<Player>
     {

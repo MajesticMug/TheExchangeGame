@@ -5,11 +5,13 @@ VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExchangeGame.Web", "ExchangeGame.Web\ExchangeGame.Web.csproj", "{01FB5186-A157-4E32-B0A0-2EC3A96EA6DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeGame.API", "ExchangeGame.API\ExchangeGame.API.csproj", "{1AFFF7DA-492F-430B-9893-4D7C347FB631}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExchangeGame.API", "ExchangeGame.API\ExchangeGame.API.csproj", "{1AFFF7DA-492F-430B-9893-4D7C347FB631}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeGame.Domain", "ExchangeGame.Domain\ExchangeGame.Domain.csproj", "{FA1ACE9F-157B-47BB-B58F-AD84F4F8D4CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExchangeGame.Domain", "ExchangeGame.Domain\ExchangeGame.Domain.csproj", "{FA1ACE9F-157B-47BB-B58F-AD84F4F8D4CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeGame.Infrastructure", "ExchangeGame.Infrastructure\ExchangeGame.Infrastructure.csproj", "{71BD4438-6041-42F8-840A-DDEB69EC95B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExchangeGame.Infrastructure", "ExchangeGame.Infrastructure\ExchangeGame.Infrastructure.csproj", "{71BD4438-6041-42F8-840A-DDEB69EC95B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeGame.Application", "ExchangeGame.Application\ExchangeGame.Application.csproj", "{B97CCCFF-68FA-47D8-AF0C-D03EC167D743}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{71BD4438-6041-42F8-840A-DDEB69EC95B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71BD4438-6041-42F8-840A-DDEB69EC95B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71BD4438-6041-42F8-840A-DDEB69EC95B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B97CCCFF-68FA-47D8-AF0C-D03EC167D743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B97CCCFF-68FA-47D8-AF0C-D03EC167D743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B97CCCFF-68FA-47D8-AF0C-D03EC167D743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B97CCCFF-68FA-47D8-AF0C-D03EC167D743}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

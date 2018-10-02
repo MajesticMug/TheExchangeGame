@@ -1,7 +1,6 @@
-﻿using System;
-using ExchangeGame.Domain.Repositories.Players;
-using ExchangeGame.Domain.Services.Implementations;
-using ExchangeGame.Domain.Services.Interfaces;
+﻿using ExchangeGame.Application.Repositories.Players;
+using ExchangeGame.Application.Services.Implementations;
+using ExchangeGame.Application.Services.Interfaces;
 using ExchangeGame.Infrastructure;
 using ExchangeGame.Infrastructure.Repositories.Players;
 using Microsoft.AspNetCore.Builder;

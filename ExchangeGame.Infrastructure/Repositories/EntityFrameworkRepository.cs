@@ -2,8 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using ExchangeGame.Domain.Model.Base;
-using ExchangeGame.Domain.Model.Player;
-using ExchangeGame.Domain.Repositories;
+using ExchangeGame.Application.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace ExchangeGame.Infrastructure.Repositories

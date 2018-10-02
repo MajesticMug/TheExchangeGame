@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using ExchangeGame.Domain.Model.Player;
 
-namespace ExchangeGame.Domain.Services.Interfaces
+namespace ExchangeGame.Application.Services.Interfaces
 {
     public interface IPlayerService
     {
