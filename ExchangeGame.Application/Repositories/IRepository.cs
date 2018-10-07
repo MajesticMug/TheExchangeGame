@@ -2,10 +2,11 @@
 using System.Linq;
 using System.Threading.Tasks;
 using ExchangeGame.Domain.Model.Base;
+using ExchangeGame.Domain.Model.Markups;
 
 namespace ExchangeGame.Application.Repositories
 {
-    public interface IRepository<TModel> where TModel : BaseModel
+    public interface IRepository<TModel> where TModel : BaseModel, IAggregateRoot
     {
         IQueryable<TModel> GetAll();
         Task<ICollection<TModel>> GetAllAsync();

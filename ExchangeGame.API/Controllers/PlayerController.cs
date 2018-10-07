@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using ExchangeGame.Domain.Model.Player;
+using ExchangeGame.Domain.Model.Players;
 using ExchangeGame.Application.Services.Interfaces;
+using ExchangeGame.Domain.Model.Accounts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExchangeGame.API.Controllers
@@ -15,6 +16,12 @@ namespace ExchangeGame.API.Controllers
         public PlayerController(IPlayerService playerService)
         {
             _playerService = playerService;
+        }
+
+        [HttpGet("{playerId:int}/account")]
+        public async Task<Account> GetPlayerAccount(int playerId)
+        {
+            return await _playerService.GetPlayerAccountAsync(playerId);
         }
 
         // GET: api/Player
@@ -32,10 +39,10 @@ namespace ExchangeGame.API.Controllers
         }
 
         // POST: api/Player
-        [HttpPost]
-        public async Task Post([FromBody] Player player)
+        [HttpPost("{startingFunds}")]
+        public async Task Post(decimal startingFunds, [FromBody] Player player)
         {
-            await _playerService.AddPlayerAsync(player);
+            await _playerService.AddPlayerAsync(player, startingFunds);
         }
 
         // PUT: api/Player/5

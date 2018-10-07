@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExchangeGame.Web", "ExchangeGame.Web\ExchangeGame.Web.csproj", "{01FB5186-A157-4E32-B0A0-2EC3A96EA6DD}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExchangeGame.API", "ExchangeGame.API\ExchangeGame.API.csproj", "{1AFFF7DA-492F-430B-9893-4D7C347FB631}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExchangeGame.Domain", "ExchangeGame.Domain\ExchangeGame.Domain.csproj", "{FA1ACE9F-157B-47BB-B58F-AD84F4F8D4CC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExchangeGame.Infrastructure", "ExchangeGame.Infrastructure\ExchangeGame.Infrastructure.csproj", "{71BD4438-6041-42F8-840A-DDEB69EC95B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeGame.Application", "ExchangeGame.Application\ExchangeGame.Application.csproj", "{B97CCCFF-68FA-47D8-AF0C-D03EC167D743}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExchangeGame.Application", "ExchangeGame.Application\ExchangeGame.Application.csproj", "{B97CCCFF-68FA-47D8-AF0C-D03EC167D743}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{75DC9CFD-339D-4048-B6C5-FAF6C4FAC5CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeGame.Application.Tests", "ExchangeGame.Application.Tests\ExchangeGame.Application.Tests.csproj", "{4737C1C1-BB85-4C2C-B302-AEB70759CAA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeGame.Test.Utils", "ExchangeGame.Test.Utils\ExchangeGame.Test.Utils.csproj", "{3DBC596F-6999-4790-8DDD-FD4D9A53309A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{01FB5186-A157-4E32-B0A0-2EC3A96EA6DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{01FB5186-A157-4E32-B0A0-2EC3A96EA6DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{01FB5186-A157-4E32-B0A0-2EC3A96EA6DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{01FB5186-A157-4E32-B0A0-2EC3A96EA6DD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1AFFF7DA-492F-430B-9893-4D7C347FB631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1AFFF7DA-492F-430B-9893-4D7C347FB631}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AFFF7DA-492F-430B-9893-4D7C347FB631}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,9 +39,21 @@ Global
 		{B97CCCFF-68FA-47D8-AF0C-D03EC167D743}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B97CCCFF-68FA-47D8-AF0C-D03EC167D743}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B97CCCFF-68FA-47D8-AF0C-D03EC167D743}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4737C1C1-BB85-4C2C-B302-AEB70759CAA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4737C1C1-BB85-4C2C-B302-AEB70759CAA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4737C1C1-BB85-4C2C-B302-AEB70759CAA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4737C1C1-BB85-4C2C-B302-AEB70759CAA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DBC596F-6999-4790-8DDD-FD4D9A53309A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DBC596F-6999-4790-8DDD-FD4D9A53309A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DBC596F-6999-4790-8DDD-FD4D9A53309A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DBC596F-6999-4790-8DDD-FD4D9A53309A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4737C1C1-BB85-4C2C-B302-AEB70759CAA4} = {75DC9CFD-339D-4048-B6C5-FAF6C4FAC5CD}
+		{3DBC596F-6999-4790-8DDD-FD4D9A53309A} = {75DC9CFD-339D-4048-B6C5-FAF6C4FAC5CD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E7B6523E-E45D-418A-846F-42A966B482EC}

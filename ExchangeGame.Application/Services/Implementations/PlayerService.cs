@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using ExchangeGame.Domain.Model.Player;
+using ExchangeGame.Domain.Model.Players;
 using ExchangeGame.Application.Repositories.Players;
 using ExchangeGame.Application.Services.Interfaces;
+using ExchangeGame.Domain.Model.Accounts;
 
 namespace ExchangeGame.Application.Services.Implementations
 {
@@ -25,8 +26,12 @@ namespace ExchangeGame.Application.Services.Implementations
             return await _playerRepository.GetAllAsync();
         }
 
-        public async Task AddPlayerAsync(Player player)
+        public async Task AddPlayerAsync(Player player, decimal startingFunds = 0m)
         {
+            player.Account = new Account();
+
+            player.Account.DepositFunds(startingFunds);
+
             await _playerRepository.Create(player);
         }
 
@@ -38,6 +43,13 @@ namespace ExchangeGame.Application.Services.Implementations
         public async Task RemovePlayerAsync(int id)
         {
             await _playerRepository.Delete(id);
+        }
+
+        public async Task<Account> GetPlayerAccountAsync(int playerId)
+        {
+            var player = await _playerRepository.GetById(playerId);
+
+            return player.Account;
         }
     }
 }

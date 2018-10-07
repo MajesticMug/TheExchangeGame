@@ -3,12 +3,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using ExchangeGame.Domain.Model.Base;
 using ExchangeGame.Application.Repositories;
+using ExchangeGame.Domain.Model.Markups;
 using Microsoft.EntityFrameworkCore;
 
 namespace ExchangeGame.Infrastructure.Repositories
 {
     public class EntityFrameworkRepository<TModel> : IRepository<TModel>
-        where TModel : BaseModel
+        where TModel : BaseModel, IAggregateRoot
     {
         private readonly DbContext _dbContext;
 

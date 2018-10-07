@@ -1,4 +1,4 @@
-﻿using ExchangeGame.Domain.Model.Player;
+﻿using ExchangeGame.Domain.Model.Players;
 using ExchangeGame.Application.Repositories.Players;
 using Microsoft.EntityFrameworkCore;
 
