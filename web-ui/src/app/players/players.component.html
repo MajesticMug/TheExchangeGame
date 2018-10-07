@@ -1,0 +1,12 @@
+<h1>Players</h1>
+
+<ul>
+  <li *ngFor="let player of players$">
+    <a routerLink="/player-details/{{player.id}}">{{ player.name }}</a>
+
+    <ul>
+      <li>Funds: ${{ player.account.funds }}</li>
+      <li>BTC: {{ player.account.bitcoins }}</li>
+    </ul>
+  </li>
+</ul>

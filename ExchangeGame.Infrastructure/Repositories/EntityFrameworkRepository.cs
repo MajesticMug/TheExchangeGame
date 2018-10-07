@@ -11,9 +11,9 @@ namespace ExchangeGame.Infrastructure.Repositories
     public class EntityFrameworkRepository<TModel> : IRepository<TModel>
         where TModel : BaseModel, IAggregateRoot
     {
-        private readonly DbContext _dbContext;
+        private readonly ExchangeGameDbContext _dbContext;
 
-        public EntityFrameworkRepository(DbContext dbContext)
+        public EntityFrameworkRepository(ExchangeGameDbContext dbContext)
         {
             _dbContext = dbContext;
         }

@@ -6,7 +6,7 @@ namespace ExchangeGame.Infrastructure.Repositories.Players
 {
     public class PlayerRepository : EntityFrameworkRepository<Player>, IPlayerRepository
     {
-        public PlayerRepository(DbContext dbContext) : base(dbContext)
+        public PlayerRepository(ExchangeGameDbContext dbContext) : base(dbContext)
         {
         }
     }

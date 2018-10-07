@@ -13,6 +13,12 @@ namespace ExchangeGame.Domain.Model.Accounts
         public Player Player { get; set; }
         public int PlayerId { get; set; }
 
+        public Account(decimal funds = 0m, decimal bitcoins = 0m)
+        {
+            Funds = funds;
+            Bitcoins = bitcoins;
+        }
+
         public virtual void WithdrawFunds(decimal amount)
         {
             Funds -= amount;
