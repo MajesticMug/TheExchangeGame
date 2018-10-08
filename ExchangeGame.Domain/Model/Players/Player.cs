@@ -1,5 +1,6 @@
 ﻿using ExchangeGame.Domain.Model.Accounts;
 using ExchangeGame.Domain.Model.Base;
+using ExchangeGame.Domain.Model.Games;
 using ExchangeGame.Domain.Model.Markups;
 
 namespace ExchangeGame.Domain.Model.Players
@@ -13,5 +14,9 @@ namespace ExchangeGame.Domain.Model.Players
         public int AccountId { get; set; }
 
         public Account Account { get; set; }
+
+        public int GameId { get; set; }
+
+        public Game Game { get; set; }
     }
 }

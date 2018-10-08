@@ -35,11 +35,13 @@ namespace ExchangeGame.Infrastructure.Repositories
                 .FirstOrDefaultAsync();
         }
 
-        public async Task Create(TModel model)
+        public async Task<int> Create(TModel model)
         {
             await _dbContext.Set<TModel>().AddAsync(model);
 
             await _dbContext.SaveChangesAsync();
+
+            return model.Id;
         }
 
         public async Task Update(int id, TModel model)
@@ -48,7 +50,7 @@ namespace ExchangeGame.Infrastructure.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task Delete(int id)
+        public async Task DeleteAsync(int id)
         {
             var toDelete = await GetById(id);
             _dbContext.Set<TModel>().Remove(toDelete);

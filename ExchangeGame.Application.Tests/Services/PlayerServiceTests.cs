@@ -16,14 +16,7 @@ namespace ExchangeGame.Application.Tests.Services
         [Fact]
         public async Task AddPlayerShouldCreateEntity()
         {
-            var service = ServiceMocker.MockPlayerService();
-
-            await service.AddPlayerAsync(
-                new Player
-                {
-                    Name = "Javi",
-                    Account = new Account()
-                });
+            var service = ServiceMocker.MockPlayerService(ServiceMocker.MockDbContext());
 
             var players = await service.GetAllPlayersAsync();
 

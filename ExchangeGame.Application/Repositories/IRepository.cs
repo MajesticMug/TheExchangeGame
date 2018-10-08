@@ -11,8 +11,8 @@ namespace ExchangeGame.Application.Repositories
         IQueryable<TModel> GetAll();
         Task<ICollection<TModel>> GetAllAsync();
         Task<TModel> GetById(int id);
-        Task Create(TModel model);
+        Task<int> Create(TModel model);
         Task Update(int id, TModel model);
-        Task Delete(int id);
+        Task DeleteAsync(int id);
     }
 }

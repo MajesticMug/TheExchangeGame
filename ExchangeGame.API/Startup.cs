@@ -1,7 +1,9 @@
-﻿using ExchangeGame.Application.Repositories.Players;
+﻿using ExchangeGame.Application.Repositories.Games;
+using ExchangeGame.Application.Repositories.Players;
 using ExchangeGame.Application.Services.Implementations;
 using ExchangeGame.Application.Services.Interfaces;
 using ExchangeGame.Infrastructure;
+using ExchangeGame.Infrastructure.Repositories.Games;
 using ExchangeGame.Infrastructure.Repositories.Players;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -35,8 +37,10 @@ namespace ExchangeGame.API
         private static void RegisterServices(IServiceCollection services)
         {
             services.AddScoped<IPlayerRepository, PlayerRepository>();
-
             services.AddScoped<IPlayerService, PlayerService>();
+
+            services.AddScoped<IGameRepository, GameRepository>();
+            services.AddScoped<IGameService, GameService>();
         }
 
         private static void SetupDb(IServiceCollection services)

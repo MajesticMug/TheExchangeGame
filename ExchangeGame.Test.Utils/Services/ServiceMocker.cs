@@ -1,6 +1,10 @@
-﻿using ExchangeGame.Application.Services.Implementations;
+﻿using System;
+using ExchangeGame.Application.Repositories.Games;
+using ExchangeGame.Application.Repositories.Players;
+using ExchangeGame.Application.Services.Implementations;
 using ExchangeGame.Application.Services.Interfaces;
 using ExchangeGame.Infrastructure;
+using ExchangeGame.Infrastructure.Repositories.Games;
 using ExchangeGame.Infrastructure.Repositories.Players;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,17 +12,31 @@ namespace ExchangeGame.Test.Utils.Services
 {
     public class ServiceMocker
     {
-        public static IPlayerService MockPlayerService()
+        public static IPlayerService MockPlayerService(ExchangeGameDbContext dbContext)
         {
-            var dbContext = new ExchangeGameDbContext(
+            return new PlayerService(MockPlayerRepository(dbContext));
+        }
+
+        public static IGameService MockGameService(ExchangeGameDbContext dbContext)
+        {
+            return new GameService(MockGameRepository(dbContext));
+        }
+
+        public static ExchangeGameDbContext MockDbContext(string dbName = null)
+        {
+            return new ExchangeGameDbContext(
                 new DbContextOptionsBuilder<ExchangeGameDbContext>().UseInMemoryDatabase(
-                    "TestDb").Options);
+                    dbName ?? Guid.NewGuid().ToString()).Options);
+        }
 
-            var repo = new PlayerRepository(dbContext);
+        public static IPlayerRepository MockPlayerRepository(ExchangeGameDbContext dbContext)
+        {
+            return new PlayerRepository(dbContext);
+        }
 
-            var service = new PlayerService(repo);
-
-            return service;
+        public static IGameRepository MockGameRepository(ExchangeGameDbContext dbContext)
+        {
+            return new GameRepository(dbContext);
         }
     }
 }
